@@ -1,0 +1,14 @@
+services:
+  background-remover-api:
+    build: .
+    container_name: background-remover-api
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    volumes:
+      - rembg-models:/root/.u2net
+    environment:
+      - PYTHONUNBUFFERED=1
+
+volumes:
+  rembg-models:
