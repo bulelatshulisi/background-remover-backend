@@ -13,7 +13,9 @@ session = new_session("isnet-general-use")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # later change this to your frontend URL
+    allow_origins=["http://localhost:5173",
+                    "http://127.0.0.1:5173",
+        "https://background-remover-frontend-two.vercel.app",],  # later change this to your frontend URL
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
